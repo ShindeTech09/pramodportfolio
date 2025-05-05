@@ -157,6 +157,71 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
+
+              SizedBox(
+                width: 1000,
+                child: Card(
+                  elevation: 30.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Flex(
+                      direction: Axis.horizontal,
+                      children: [
+                        Text(
+                          'Wanna A Reach Me?',
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        Gap(20),
+                        Icon(HeroIcons.arrow_right, size: 30),
+                        Gap(50),
+                        Flex(
+                          direction: Axis.vertical,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Icon(EvaIcons.phone_call_outline, size: 40),
+                                Gap(15),
+                                Text(
+                                  '+911234567890',
+                                  style: TextStyle(fontSize: 30),
+                                ),
+                              ],
+                            ),
+                            Gap(10),
+                            Row(
+                              children: [
+                                Icon(EvaIcons.email_outline, size: 40),
+                                Gap(15),
+                                Text(
+                                  'someone@gmail.com',
+                                  style: TextStyle(fontSize: 15),
+                                ),
+                              ],
+                            ),
+                            Gap(10),
+                            Row(
+                              children: [
+                                Icon(EvaIcons.map_outline, size: 40),
+                                Gap(15),
+                                Text(
+                                  'Naigaon (East), Tal. Vasai, \nDist. Palghar, Maharashtra 401208',
+                                  style: TextStyle(fontSize: 15),
+                                  softWrap: true,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Gap(50),
               Flex(
                 spacing: 50.0,
                 direction: Axis.horizontal,
