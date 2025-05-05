@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:flutter/material.dart';
 
@@ -18,4 +19,10 @@ class StringValues {
   static IconData instagramIcon = FontAwesome.instagram_brand;
   static IconData pinterestIcon = FontAwesome.pinterest_p_brand;
   static IconData twitterIcon = FontAwesome.x_twitter_brand;
+  static CarouselOptions carouselOptions = CarouselOptions(
+    autoPlay: true,
+    enlargeCenterPage: true,
+    viewportFraction: 0.99,
+    clipBehavior: Clip.antiAliasWithSaveLayer,
+  );
 }
