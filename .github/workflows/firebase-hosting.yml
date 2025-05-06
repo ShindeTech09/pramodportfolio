@@ -1,0 +1,26 @@
+name: Deploy Flutter Web to Firebase Hosting
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.29.3"
+      - name: Install Dependencies
+        run: flutter pub get
+      - name: Build FLutter Web
+        run: flutter build web --release --no-sound-null-safety
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN}}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRAMOD_PORTFOLIO_120AD }}
+          channelId: live
