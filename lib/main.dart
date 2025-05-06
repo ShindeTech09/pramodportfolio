@@ -11,10 +11,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(),
-      theme: ThemeData.dark(useMaterial3: true),
-      debugShowCheckedModeBanner: false,
+    return SafeArea(
+      child: MaterialApp(
+        home: HomePage(),
+        theme: ThemeData.dark(useMaterial3: true),
+        debugShowCheckedModeBanner: false,
+      ),
     );
   }
 }

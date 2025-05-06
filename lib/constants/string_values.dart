@@ -1,4 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:flutter/material.dart';
 
@@ -24,5 +26,61 @@ class StringValues {
     enlargeCenterPage: true,
     viewportFraction: 0.99,
     clipBehavior: Clip.antiAliasWithSaveLayer,
+  );
+  static AppBar appBar = AppBar(
+    toolbarHeight: 90.0,
+    backgroundColor: Colors.transparent,
+    title: const Text('Pramod Portfolio'),
+    titleTextStyle: GoogleFonts.lobster(
+      textStyle: const TextStyle(
+        letterSpacing: 2,
+        fontSize: 40,
+        color: Colors.white,
+      ),
+    ),
+    actions: [
+      TextButton(
+        onPressed: () {},
+        child: Text('HOME', style: GoogleFonts.hedvigLettersSans(fontSize: 17)),
+      ),
+      Gap(30),
+      TextButton(
+        onPressed: () {},
+        child: Text(
+          'PORTFOLIO',
+          style: GoogleFonts.hedvigLettersSans(fontSize: 17),
+        ),
+      ),
+      Gap(30),
+      TextButton(
+        onPressed: () {},
+        child: Text(
+          'CLIENT\'S GALLERY',
+          style: GoogleFonts.hedvigLettersSans(fontSize: 17),
+        ),
+      ),
+      Gap(30),
+      TextButton(
+        onPressed: () {},
+        child: Text('BLOG', style: GoogleFonts.hedvigLettersSans(fontSize: 17)),
+      ),
+      Gap(30),
+      TextButton(
+        onPressed: () {},
+        child: Text(
+          'ABOUT',
+          style: GoogleFonts.hedvigLettersSans(fontSize: 17),
+        ),
+      ),
+      Gap(30),
+      TextButton(
+        onPressed: () {},
+        child: Text(
+          'CONTACT',
+          style: GoogleFonts.hedvigLettersSans(fontSize: 17),
+        ),
+      ),
+      Gap(30),
+    ],
   );
 }
