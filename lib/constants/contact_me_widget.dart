@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:pramod_portfolio/constants/string_values.dart';
 
 class ContactMeWidget extends StatelessWidget {
   const ContactMeWidget({super.key});
@@ -29,7 +30,10 @@ class ContactMeWidget extends StatelessWidget {
                     children: [
                       Icon(EvaIcons.phone_call_outline, size: 40),
                       Gap(15),
-                      Text('+911234567890', style: TextStyle(fontSize: 25)),
+                      Text(
+                        StringValues.phoneNumber,
+                        style: TextStyle(fontSize: 25),
+                      ),
                     ],
                   ),
                   Gap(10),
@@ -37,7 +41,10 @@ class ContactMeWidget extends StatelessWidget {
                     children: [
                       Icon(EvaIcons.email_outline, size: 40),
                       Gap(15),
-                      Text('someone@gmail.com', style: TextStyle(fontSize: 25)),
+                      Text(
+                        StringValues.emailID,
+                        style: TextStyle(fontSize: 25),
+                      ),
                     ],
                   ),
                 ],

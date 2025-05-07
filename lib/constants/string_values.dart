@@ -21,6 +21,8 @@ class StringValues {
   static IconData instagramIcon = FontAwesome.instagram_brand;
   static IconData pinterestIcon = FontAwesome.pinterest_p_brand;
   static IconData twitterIcon = FontAwesome.x_twitter_brand;
+  static String emailID = 'pramodcreativecaptures@gmail.com';
+  static String phoneNumber = '+91 7039691810';
   static CarouselOptions carouselOptions = CarouselOptions(
     autoPlay: true,
     enlargeCenterPage: true,
@@ -47,14 +49,6 @@ class StringValues {
       TextButton(
         onPressed: () {},
         child: Text(
-          'PORTFOLIO',
-          style: GoogleFonts.hedvigLettersSans(fontSize: 17),
-        ),
-      ),
-      Gap(30),
-      TextButton(
-        onPressed: () {},
-        child: Text(
           'CLIENT\'S GALLERY',
           style: GoogleFonts.hedvigLettersSans(fontSize: 17),
         ),
@@ -74,7 +68,9 @@ class StringValues {
       ),
       Gap(30),
       TextButton(
-        onPressed: () {},
+        onPressed: () {
+
+        },
         child: Text(
           'CONTACT',
           style: GoogleFonts.hedvigLettersSans(fontSize: 17),

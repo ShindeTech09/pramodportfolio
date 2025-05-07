@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:pramod_portfolio/home_page.dart';
+import 'package:pramod_portfolio/pages/home_page.dart';
 
 void main() {
   runApp(const MainApp());
