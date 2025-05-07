@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pramod_portfolio/pages/about_page.dart';
+import 'package:pramod_portfolio/pages/blog_page.dart';
 import 'package:pramod_portfolio/pages/contact_page.dart';
 
 import 'package:pramod_portfolio/pages/home_page.dart';
@@ -17,8 +19,20 @@ class MainApp extends StatelessWidget {
       child: GetMaterialApp(
         initialRoute: '/home',
         getPages: [
-          GetPage(name: '/home', page: () => const HomePage()),
-          GetPage(name: '/contact', page: () => const ContactPage()),
+          GetPage(
+            name: '/home',
+            page: () => const HomePage(),
+            transition: Transition.cupertinoDialog,
+            transitionDuration: const Duration(milliseconds: 500),
+          ),
+          GetPage(
+            name: '/contact',
+            page: () => const ContactPage(),
+            transition: Transition.cupertino,
+            transitionDuration: const Duration(milliseconds: 800),
+          ),
+          GetPage(name: '/blog', page: () => const BlogPage()),
+          GetPage(name: '/bio', page: () => const AboutPage()),
         ],
         theme: ThemeData.dark(useMaterial3: true),
         debugShowCheckedModeBanner: false,

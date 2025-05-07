@@ -34,6 +34,7 @@ class _HomePageState extends State<HomePage> {
               ContactMeWidget(),
               Gap(50),
               FooterWidget(),
+              Gap(50),
             ],
           ),
         ),

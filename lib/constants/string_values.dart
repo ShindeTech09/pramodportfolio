@@ -4,7 +4,7 @@ import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:pramod_portfolio/pages/contact_page.dart';
+import 'package:pramod_portfolio/pages/home_page.dart';
 
 class StringValues {
   static String image1 = 'assets/images/wp2767331-4k-desktop-backgrounds.jpg';
@@ -34,18 +34,14 @@ class StringValues {
   static AppBar appBar = AppBar(
     toolbarHeight: 90.0,
     backgroundColor: Colors.transparent,
-    title: const Text('Pramod Portfolio'),
-    titleTextStyle: GoogleFonts.lobster(
-      textStyle: const TextStyle(
-        letterSpacing: 2,
-        fontSize: 40,
-        color: Colors.white,
-      ),
+    title: const Text('Pramod Photography'),
+    titleTextStyle: GoogleFonts.robotoSerif(
+      textStyle: TextStyle(letterSpacing: 2, fontSize: 40, color: Colors.white),
     ),
     actions: [
       TextButton(
         onPressed: () {
-          Get.toNamed('/home');
+          Get.offAllNamed('/home');
         },
         child: Text('HOME', style: GoogleFonts.hedvigLettersSans(fontSize: 17)),
       ),
@@ -59,16 +55,17 @@ class StringValues {
       ),
       Gap(30),
       TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.toNamed('/blog',  );
+        },
         child: Text('BLOG', style: GoogleFonts.hedvigLettersSans(fontSize: 17)),
       ),
       Gap(30),
       TextButton(
-        onPressed: () {},
-        child: Text(
-          'ABOUT',
-          style: GoogleFonts.hedvigLettersSans(fontSize: 17),
-        ),
+        onPressed: () {
+          Get.toNamed('/bio');
+        },
+        child: Text('BIO', style: GoogleFonts.hedvigLettersSans(fontSize: 17)),
       ),
       Gap(30),
       TextButton(
