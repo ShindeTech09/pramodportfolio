@@ -6,6 +6,11 @@ class ContactPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: StringValues.appBar);
+    return Scaffold(
+      appBar: StringValues.appBar,
+      body: SingleChildScrollView(
+        child: Column(mainAxisSize: MainAxisSize.min, children: [],),
+      ),
+    );
   }
 }

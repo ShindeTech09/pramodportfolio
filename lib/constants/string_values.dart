@@ -1,8 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:gap/gap.dart';
+import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:pramod_portfolio/pages/contact_page.dart';
 
 class StringValues {
   static String image1 = 'assets/images/wp2767331-4k-desktop-backgrounds.jpg';
@@ -42,7 +44,9 @@ class StringValues {
     ),
     actions: [
       TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.toNamed('/home');
+        },
         child: Text('HOME', style: GoogleFonts.hedvigLettersSans(fontSize: 17)),
       ),
       Gap(30),
@@ -69,7 +73,7 @@ class StringValues {
       Gap(30),
       TextButton(
         onPressed: () {
-
+          Get.toNamed('/contact');
         },
         child: Text(
           'CONTACT',
