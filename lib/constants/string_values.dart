@@ -4,7 +4,6 @@ import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:pramod_portfolio/pages/home_page.dart';
 
 class StringValues {
   static String image1 = 'assets/images/wp2767331-4k-desktop-backgrounds.jpg';
