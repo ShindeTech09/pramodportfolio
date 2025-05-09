@@ -8,7 +8,7 @@ class PortraitGalleryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: WidgetValues.appBar,
+      appBar: WidgetValues.appBar(context),
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,

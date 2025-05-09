@@ -6,6 +6,6 @@ class BlogPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: WidgetValues.appBar);
+    return Scaffold(appBar: WidgetValues.appBar(context));
   }
 }

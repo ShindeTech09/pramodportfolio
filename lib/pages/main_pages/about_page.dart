@@ -11,7 +11,7 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: WidgetValues.appBar,
+      appBar: WidgetValues.appBar(context),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
