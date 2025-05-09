@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pramod_portfolio/pages/about_page.dart';
-import 'package:pramod_portfolio/pages/blog_page.dart';
-import 'package:pramod_portfolio/pages/contact_page.dart';
+import 'package:pramod_portfolio/pages/main_pages/about_page.dart';
+import 'package:pramod_portfolio/pages/main_pages/blog_page.dart';
+import 'package:pramod_portfolio/pages/main_pages/contact_page.dart';
+import 'package:pramod_portfolio/pages/photo_gallery_pages/event_gallery_page.dart';
 
-import 'package:pramod_portfolio/pages/home_page.dart';
+import 'package:pramod_portfolio/pages/main_pages/home_page.dart';
+import 'package:pramod_portfolio/pages/photo_gallery_pages/portrait_gallery_page.dart';
+import 'package:pramod_portfolio/pages/photo_gallery_pages/pre_wedding_gallery.dart';
 
 void main() {
   runApp(const MainApp());
@@ -40,6 +43,24 @@ class MainApp extends StatelessWidget {
           GetPage(
             name: '/bio',
             page: () => const AboutPage(),
+            transition: Transition.cupertino,
+            transitionDuration: const Duration(milliseconds: 800),
+          ),
+          GetPage(
+            name: '/event',
+            page: () => const EventGalleryPage(),
+            transition: Transition.cupertino,
+            transitionDuration: const Duration(milliseconds: 800),
+          ),
+          GetPage(
+            name: '/preWedding',
+            page: () => const PreWeddingGalleryPage(),
+            transition: Transition.cupertino,
+            transitionDuration: const Duration(milliseconds: 800),
+          ),
+          GetPage(
+            name: '/portrait',
+            page: () => const PortraitGalleryPage(),
             transition: Transition.cupertino,
             transitionDuration: const Duration(milliseconds: 800),
           ),

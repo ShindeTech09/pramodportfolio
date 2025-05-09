@@ -4,8 +4,8 @@ import 'package:pramod_portfolio/constants/contact_me_widget.dart';
 import 'package:pramod_portfolio/constants/footer_widget.dart';
 import 'package:pramod_portfolio/constants/imageview_slider.dart';
 import 'package:pramod_portfolio/constants/photography_cards.dart';
-import 'package:pramod_portfolio/constants/string_values.dart';
 import 'package:pramod_portfolio/constants/tagline_card.dart';
+import 'package:pramod_portfolio/constants/widget_values.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: StringValues.appBar,
+      appBar: WidgetValues.appBar,
       body: Center(
         child: SingleChildScrollView(
           child: Column(

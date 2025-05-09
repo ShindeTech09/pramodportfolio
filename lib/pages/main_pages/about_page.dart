@@ -3,7 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pramod_portfolio/constants/footer_widget.dart';
 import 'package:pramod_portfolio/constants/social_media_icon.dart';
-import 'package:pramod_portfolio/constants/string_values.dart';
+import 'package:pramod_portfolio/constants/widget_values.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
@@ -11,7 +11,7 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: StringValues.appBar,
+      appBar: WidgetValues.appBar,
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -56,7 +56,7 @@ class AboutPage extends StatelessWidget {
               Flex(
                 direction: Axis.horizontal,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [SocialMediaIcon(icon: StringValues.instagramIcon)],
+                children: [SocialMediaIcon(icon: WidgetValues.instagramIcon)],
               ),
               Gap(90),
               FooterWidget(),

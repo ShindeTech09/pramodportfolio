@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pramod_portfolio/constants/social_media_icon.dart';
-import 'package:pramod_portfolio/constants/string_values.dart';
+import 'package:pramod_portfolio/constants/widget_values.dart';
 
 class FooterWidget extends StatelessWidget {
   const FooterWidget({super.key});
@@ -27,13 +27,13 @@ class FooterWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 direction: Axis.horizontal,
                 children: [
-                  SocialMediaIcon(icon: StringValues.facebookIcon),
+                  SocialMediaIcon(icon: WidgetValues.facebookIcon),
                   Gap(30),
-                  SocialMediaIcon(icon: StringValues.instagramIcon),
+                  SocialMediaIcon(icon: WidgetValues.instagramIcon),
                   Gap(30),
-                  SocialMediaIcon(icon: StringValues.pinterestIcon),
+                  SocialMediaIcon(icon: WidgetValues.pinterestIcon),
                   Gap(30),
-                  SocialMediaIcon(icon: StringValues.twitterIcon),
+                  SocialMediaIcon(icon: WidgetValues.twitterIcon),
                 ],
               ),
               Gap(20),
