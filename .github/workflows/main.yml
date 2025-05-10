@@ -1,0 +1,34 @@
+name: Deploy Flutter Web to GitHub Pages
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.29.3"
+      
+      - name: Install Dependencies
+        run: flutter pub get
+      
+      - name: Build Flutter Web
+        run: flutter build web
+      
+      - name: Configure GitHub Pages Deployment
+        run: |
+          echo "pramodphotography.cooo.in" > ./build/web/CNAME
+      
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build/web
+          token: ${{ secrets.GITHUB_TOKEN }}
