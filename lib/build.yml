@@ -1,0 +1,32 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+      nodejs: 14
+    commands:
+      - echo "Installing Flutter SDK..."
+      - git clone https://github.com/flutter/flutter.git -b stable
+      - export PATH="$PATH:`pwd`/flutter/bin"
+      - flutter doctor
+
+  pre_build:
+    commands:
+      - echo "Getting Flutter dependencies..."
+      - flutter pub get
+
+  build:
+    commands:
+      - echo "Building Flutter web app..."
+      - flutter build web
+
+  post_build:
+    commands:
+      - echo "Deploying to S3..."
+      - aws s3 sync build/web s3://pramod-photography-website/ --delete --acl public-read
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build/web

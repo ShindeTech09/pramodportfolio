@@ -43,9 +43,16 @@ class WidgetValues {
         Gap(30),
         DropdownButtonHideUnderline(
           child: DropdownButton<String>(
+            enableFeedback: true,
+            padding: EdgeInsets.symmetric(horizontal: 13.0),
+            iconSize: 0.0,
+            borderRadius: BorderRadius.circular(30.0),
             hint: Text(
               'PHOTO GALLERY',
-              style: GoogleFonts.hedvigLettersSans(fontSize: 17),
+              style: GoogleFonts.hedvigLettersSans(
+                fontSize: 17,
+                color: Theme.of(context).colorScheme.primary,
+              ),
             ),
             items: [
               DropdownMenuItem(
