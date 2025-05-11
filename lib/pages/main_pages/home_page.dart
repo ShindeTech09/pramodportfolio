@@ -6,37 +6,65 @@ import 'package:pramod_portfolio/constants/imageview_slider.dart';
 import 'package:pramod_portfolio/constants/photography_cards.dart';
 import 'package:pramod_portfolio/constants/tagline_card.dart';
 import 'package:pramod_portfolio/constants/widget_values.dart';
+import 'package:pramod_portfolio/responsive/responsive.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: WidgetValues.appBar(context),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              ImageViewSlider(),
-              Gap(30),
-              TaglineCard(),
-              Gap(30),
-              PhotographyCards(),
-              ContactMeWidget(),
-              Gap(50),
-              FooterWidget(),
-              Gap(50),
-            ],
-          ),
+      body: Responsive(
+        mobileLayout: _buildMobileLayout(),
+        desktopLayout: _buildDesktopLayout(),
+      ),
+    );
+  }
+
+  Widget _buildMobileLayout() {
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            ImageViewSlider(),
+            Gap(20),
+            TaglineCard(),
+            Gap(20),
+            PhotographyCards(),
+            ContactMeWidget(),
+            Gap(30),
+            FooterWidget(),
+            Gap(30),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDesktopLayout() {
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 50.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            ImageViewSlider(),
+            Gap(30),
+            TaglineCard(),
+            Gap(30),
+            PhotographyCards(),
+            ContactMeWidget(),
+            Gap(50),
+            FooterWidget(),
+            Gap(50),
+          ],
         ),
       ),
     );
