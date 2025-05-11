@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pramod_portfolio/constants/string_values.dart';
 import 'package:pramod_portfolio/constants/widget_values.dart';
