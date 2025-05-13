@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -39,22 +40,50 @@ class EventGalleryPage extends StatelessWidget {
                     return GridTile(
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
-                        child: Image.network(
-                          StringValues
-                              .imageList[index], // Use the correct index
-                          fit: BoxFit.cover,
-                          loadingBuilder: (context, child, loadingProgress) {
-                            if (loadingProgress == null) return child;
+                        child:
+                        // Image.network(
+                        //   StringValues
+                        //       .imageList[index], // Use the correct index
+                        //   fit: BoxFit.cover,
+                        //   loadingBuilder: (context, child, loadingProgress) {
+                        //     if (loadingProgress == null) return child;
+                        //     return const Center(
+                        //       child: CircularProgressIndicator(),
+                        //     );
+                        //   },
+                        //   errorBuilder: (context, error, stackTrace) {
+                        //     return const Center(
+                        //       child: Icon(
+                        //         Icons.broken_image,
+                        //         size: 50,
+                        //         color: Colors.grey,
+                        //       ),
+                        //     );
+                        //   },
+                        // ),
+                        CachedNetworkImage(
+                          imageUrl: StringValues.imageList[index],
+                          progressIndicatorBuilder: (context, url, progress) {
                             return const Center(
                               child: CircularProgressIndicator(),
                             );
                           },
-                          errorBuilder: (context, error, stackTrace) {
+                          errorWidget: (context, url, error) {
                             return const Center(
-                              child: Icon(
-                                Icons.broken_image,
-                                size: 50,
-                                color: Colors.grey,
+                              child: Text(
+                                '🙏',
+                                style: TextStyle(fontSize: 30.0),
+                              ),
+                            );
+                          },
+                          imageBuilder: (context, imageProvider) {
+                            return Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: imageProvider,
+                                  fit: BoxFit.cover,
+                                ),
+                                borderRadius: BorderRadius.circular(20.0),
                               ),
                             );
                           },
