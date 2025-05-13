@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'dart:async';
 import 'package:get/get.dart';
 
@@ -16,7 +15,6 @@ class _SplashScreenState extends State<SplashScreen>
   late AnimationController _zoomController;
   late Animation<double> _zoomAnimation;
   late AnimationController _fadeTextController;
-  final AudioPlayer _audioPlayer = AudioPlayer();
   final List<String> messages = [
     "Adjusting Aperture...",
     "Focusing Lens...",
@@ -59,7 +57,6 @@ class _SplashScreenState extends State<SplashScreen>
     _lightController.forward();
 
     // Play shutter sound once
-    _playSound('assets/mp3/camera-shutter-187326.ogg');
 
     // Cycle through loading messages
     Timer.periodic(const Duration(seconds: 1), (timer) {
@@ -77,16 +74,6 @@ class _SplashScreenState extends State<SplashScreen>
     });
   }
 
-  void _playSound(String assetPath) async {
-    try {
-      await _audioPlayer.play(
-        AssetSource('assets/mp3/camera-shutter-187326.ogg'),
-      );
-    } catch (e) {
-      debugPrint("Audio playback failed: $e");
-    }
-  }
-
   void _goToHome() {
     Get.offAllNamed('/home');
   }
@@ -96,7 +83,6 @@ class _SplashScreenState extends State<SplashScreen>
     _lightController.dispose();
     _zoomController.dispose();
     _fadeTextController.dispose();
-    _audioPlayer.dispose();
     super.dispose();
   }
 
