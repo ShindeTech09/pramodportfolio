@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: WidgetValues.appBar(context),
       body: Responsive(
         mobileLayout: _buildMobileLayout(),
