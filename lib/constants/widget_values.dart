@@ -22,9 +22,15 @@ class WidgetValues {
     final screenWidth = MediaQuery.of(context).size.width;
     return AppBar(
       excludeHeaderSemantics: true,
-      leadingWidth: 300,
+      leadingWidth:
+          screenWidth > 1024
+              ? 300 // Larger width for desktop
+              : screenWidth > 768
+              ? 200 // Medium width for tablets
+              : 150, // Smaller width for mobile
       leading: Image(
-        image: AssetImage('assets/images/Creative-Capture_logo.png'),
+        image: const AssetImage('assets/images/Creative-Capture_logo.png'),
+        fit: BoxFit.contain, // Ensure the logo scales properly
       ),
       toolbarHeight: 150.0,
       backgroundColor: const Color.fromARGB(
@@ -35,7 +41,7 @@ class WidgetValues {
       ), // Make the AppBar transparent
       elevation: 0, // Remove shadow
       actions:
-          screenWidth > 1140
+          screenWidth > 1024
               ? _buildDesktopActions(context) // Desktop layout
               : _buildMobileActions(context), // Mobile layout
     );
@@ -117,8 +123,11 @@ class WidgetValues {
   static List<Widget> _buildMobileActions(BuildContext context) {
     return [
       PopupMenuButton<String>(
+        color: const Color.fromARGB(192, 0, 0, 0),
+        borderRadius: BorderRadius.circular(40),
+        padding: const EdgeInsets.only(right: 30),
         icon: Icon(
-          FontAwesome.ellipsis_vertical_solid,
+          FontAwesome.bars_progress_solid,
           color: Theme.of(context).colorScheme.primary,
           size: 35,
         ),
@@ -140,29 +149,43 @@ class WidgetValues {
               const PopupMenuItem(value: 'Home', child: Text('HOME')),
               PopupMenuItem(
                 value: 'PhotoGallery',
+                textStyle: GoogleFonts.hedvigLettersSans(
+                  fontSize: 15,
+                  color: Colors.white,
+                ),
                 child: DropdownButtonHideUnderline(
                   child: DropdownButton<String>(
-                    icon: const Icon(
-                      Icons.arrow_drop_down,
-                      color: Colors.black,
+                    iconSize: 0.0,
+                    dropdownColor: const Color.fromARGB(192, 0, 0, 0),
+                    hint: Text(
+                      'PHOTO GALLERY',
+                      style: GoogleFonts.hedvigLettersSans(
+                        fontSize: 15,
+                        color: Colors.white,
+                      ),
                     ),
-                    dropdownColor: Colors.grey[200],
-                    style: GoogleFonts.hedvigLettersSans(
-                      fontSize: 15,
-                      color: Colors.black,
-                    ),
+
                     items: [
                       DropdownMenuItem(
                         value: 'Event',
-                        child: Text('Events Gallery'),
+                        child: Text(
+                          'Events Gallery',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                       DropdownMenuItem(
                         value: 'Portrait',
-                        child: Text('Portraits Gallery'),
+                        child: Text(
+                          'Portraits Gallery',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                       DropdownMenuItem(
                         value: 'PreWedding',
-                        child: Text('Pre Wedding'),
+                        child: Text(
+                          'Pre Wedding',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ],
                     onChanged: (value) {
@@ -174,7 +197,6 @@ class WidgetValues {
                         Get.toNamed('/preWedding');
                       }
                     },
-                    hint: const Text('PHOTO GALLERY'),
                   ),
                 ),
               ),

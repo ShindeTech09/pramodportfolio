@@ -2,9 +2,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pramod_portfolio/firebase_options.dart';
-import 'package:pramod_portfolio/ignore_folder/appbar.dart';
 import 'package:pramod_portfolio/pages/splash_screen.dart';
-import 'package:pramod_portfolio/pages/main_pages/about_page.dart';
+import 'package:pramod_portfolio/pages/main_pages/bio_page.dart';
 import 'package:pramod_portfolio/pages/main_pages/blog_page.dart';
 import 'package:pramod_portfolio/pages/main_pages/contact_page.dart';
 import 'package:pramod_portfolio/pages/photo_gallery_pages/event_gallery_page.dart';
@@ -53,7 +52,7 @@ class PramodPhotographyApp extends StatelessWidget {
           ),
           GetPage(
             name: '/bio',
-            page: () => const AboutPage(),
+            page: () => const BioPage(),
             transition: Transition.cupertino,
             transitionDuration: const Duration(milliseconds: 800),
           ),

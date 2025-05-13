@@ -59,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen>
     _lightController.forward();
 
     // Play shutter sound once
-    _playSound('assets/mp3/camera-shutter-187326.mp3');
+    _playSound('assets/mp3/camera-shutter-187326.ogg');
 
     // Cycle through loading messages
     Timer.periodic(const Duration(seconds: 1), (timer) {
@@ -80,7 +80,7 @@ class _SplashScreenState extends State<SplashScreen>
   void _playSound(String assetPath) async {
     try {
       await _audioPlayer.play(
-        AssetSource('assets/mp3/camera-shutter-187326.mp3'),
+        AssetSource('assets/mp3/camera-shutter-187326.ogg'),
       );
     } catch (e) {
       debugPrint("Audio playback failed: $e");
@@ -102,6 +102,7 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: AnimatedBuilder(
         animation: _lightController,
@@ -121,7 +122,7 @@ class _SplashScreenState extends State<SplashScreen>
                     child: Container(
                       width: double.infinity,
                       height: double.infinity,
-                      color: Color(0xFF1F233E),
+                      color: Color.fromARGB(255, 6, 9, 30),
                     ),
                   ),
                 ),
@@ -129,7 +130,7 @@ class _SplashScreenState extends State<SplashScreen>
               // Logo Fade-in
               Positioned(
                 height: 300,
-                top: 180,
+                top: screenWidth > 1024 ? 180 : 90,
                 child: AnimatedOpacity(
                   duration: const Duration(seconds: 2),
                   opacity: lightValue,
@@ -165,31 +166,26 @@ class _SplashScreenState extends State<SplashScreen>
                   bottom: 80,
                   left: 20,
                   right: 20,
-                  child: AnimatedOpacity(
-                    curve: Curves.easeIn,
-                    opacity: lightValue,
-                    duration: const Duration(milliseconds: 100),
-                    child: SlideTransition(
-                      position: Tween<Offset>(
-                        begin: const Offset(
-                          0,
-                          0.5,
-                        ), // Start slightly below the screen
-                        end: Offset.zero, // End at the original position
-                      ).animate(
-                        CurvedAnimation(
-                          parent: _lightController,
-                          curve: Curves.easeOut, // Smooth slide-in effect
-                        ),
+                  child: SlideTransition(
+                    position: Tween<Offset>(
+                      begin: const Offset(
+                        0,
+                        0.5,
+                      ), // Start slightly below the screen
+                      end: Offset.zero, // End at the original position
+                    ).animate(
+                      CurvedAnimation(
+                        parent: _lightController,
+                        curve: Curves.easeOut, // Smooth slide-in effect
                       ),
-                      child: Text(
-                        "\"Capturing life’s most precious moments with care, creativity, and a touch of warmth.\"",
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontSize: 19,
-                          color: Colors.white,
-                          shadows: [Shadow(blurRadius: 4, color: Colors.black)],
-                        ),
+                    ),
+                    child: Text(
+                      "\"Capturing life’s most precious moments with care, creativity, and a touch of warmth.\"",
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 19,
+                        color: Colors.white,
+                        shadows: [Shadow(blurRadius: 4, color: Colors.black)],
                       ),
                     ),
                   ),
