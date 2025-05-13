@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pramod_portfolio/constants/footer_widget.dart';
-import 'package:pramod_portfolio/constants/social_media_icon.dart';
 import 'package:pramod_portfolio/constants/widget_values.dart';
 
 class BioPage extends StatelessWidget {
