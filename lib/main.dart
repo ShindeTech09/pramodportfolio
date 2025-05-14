@@ -24,6 +24,7 @@ class PramodPhotographyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: GetMaterialApp(
+title: "Pramod Portfolio",
         initialRoute: '/loading',
         getPages: [
           GetPage(
