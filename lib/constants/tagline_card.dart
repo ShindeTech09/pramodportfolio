@@ -30,7 +30,7 @@ class TaglineCard extends StatelessWidget {
             : 20; // Adjust horizontal padding
     final double verticalPadding =
         screenWidth > 1024
-            ? 90
+            ? 70
             : screenWidth > 768
             ? 60
             : 40; // Adjust vertical padding

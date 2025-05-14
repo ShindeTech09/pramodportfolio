@@ -52,7 +52,7 @@ class BioPage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Gap(30),
+              const Gap(180),
               Text(
                 'PRAMOD MORE',
                 style: GoogleFonts.actor(

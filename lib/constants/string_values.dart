@@ -1,9 +1,19 @@
 class StringValues {
-  static String image1 = 'assets/images/wp2767331-4k-desktop-backgrounds.jpg';
-  static String image2 = 'assets/images/wp2767332-4k-desktop-backgrounds.jpg';
-  static String image3 = 'assets/images/wp2767334-4k-desktop-backgrounds.jpg';
-  static String image4 = 'assets/images/wp2767350-4k-desktop-backgrounds.jpg';
-  static String image5 = 'assets/images/wp2767395-4k-desktop-backgrounds.jpg';
+  static String image1 =
+      'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image1.jpg';
+
+  static String image2 =
+      'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image2.jpg';
+  static String image3 =
+      'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image3.jpg';
+  static String image4 =
+      'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image4.jpg';
+  static String image5 =
+      'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image5.jpg';
+  static String image6 =
+      'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image6.jpg';
+  static String image7 =
+      'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image7.jpg';
   static String bgImage = 'assets/images/bg_image-removebg-preview.png';
   static String cardSlider1 = 'assets/card_slider/card_slider1.png';
   static String cardSlider2 = 'assets/card_slider/card_slider2.png';
@@ -11,6 +21,7 @@ class StringValues {
   static String cardSlider4 = 'assets/card_slider/card_slider4.png';
   static String cardSlider5 = 'assets/card_slider/card_slider5.png';
   static String cardSlider6 = 'assets/card_slider/card_slider6.png';
+  static String cardSlider7 = 'assets/card_slider/card_slider7.png';
   static String emailID = 'pramodcreativecaptures@gmail.com';
   static String phoneNumber = '+91 7039691810';
 

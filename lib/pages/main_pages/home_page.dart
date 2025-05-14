@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
             ImageViewSlider(),
             Gap(30),
             TaglineCard(),
-            Gap(30),
+            // Gap(30),
             PhotographyCards(),
             ContactMeWidget(),
             Gap(50),

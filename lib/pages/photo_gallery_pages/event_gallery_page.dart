@@ -6,7 +6,9 @@ import 'package:pramod_portfolio/constants/string_values.dart';
 import 'package:pramod_portfolio/constants/widget_values.dart';
 
 class EventGalleryPage extends StatelessWidget {
-  const EventGalleryPage({super.key});
+  const EventGalleryPage({
+    super.key,
+  }) ;
 
   @override
   Widget build(BuildContext context) {

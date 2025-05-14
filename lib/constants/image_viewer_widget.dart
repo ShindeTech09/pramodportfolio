@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class ImageViewerWidget extends StatelessWidget {
@@ -9,10 +10,15 @@ class ImageViewerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
-      child: Image(
-        image: AssetImage(imagePath),
-        errorBuilder: (context, error, stackTrace) {
-          return const Icon(Icons.broken_image, size: 100, color: Colors.grey);
+      child: CachedNetworkImage(
+        imageUrl: imagePath,
+        imageBuilder: (context, imageProvider) {
+          return Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(image: imageProvider, fit: BoxFit.contain),
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+          );
         },
       ),
     );

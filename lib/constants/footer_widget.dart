@@ -48,6 +48,7 @@ class FooterWidget extends StatelessWidget {
         vertical: verticalPadding,
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(

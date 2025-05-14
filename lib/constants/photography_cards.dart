@@ -24,7 +24,7 @@ class PhotographyCards extends StatelessWidget {
             : 20; // Adjust horizontal padding
     final double verticalPadding =
         screenWidth > 1024
-            ? 50
+            ? 40
             : screenWidth > 768
             ? 30
             : 20; // Adjust vertical padding
@@ -81,6 +81,9 @@ class PhotographyCards extends StatelessWidget {
       'textTitle': 'Portrait Photography',
     },
     {'imagePath': StringValues.cardSlider5, 'textTitle': 'Food Photography'},
-    {'imagePath': StringValues.cardSlider3, 'textTitle': 'Food Photography'},
+    {
+      'imagePath': StringValues.cardSlider7,
+      'textTitle': 'Baby Shower Photography',
+    },
   ];
 }

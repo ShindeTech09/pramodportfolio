@@ -16,6 +16,8 @@ class ImageViewSlider extends StatelessWidget {
         ImageViewerWidget(imagePath: StringValues.image3),
         ImageViewerWidget(imagePath: StringValues.image4),
         ImageViewerWidget(imagePath: StringValues.image5),
+        ImageViewerWidget(imagePath: StringValues.image6),
+        ImageViewerWidget(imagePath: StringValues.image7),
       ],
       options: WidgetValues.carouselOptions,
     );
