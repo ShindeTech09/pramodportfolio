@@ -1,3 +1,5 @@
+import 'package:pramod_portfolio/pages/photo_gallery_pages/pre_wedding_gallery.dart';
+
 class StringValues {
   static String image1 =
       'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image1.jpg';
@@ -25,7 +27,7 @@ class StringValues {
   static String emailID = 'pramodcreativecaptures@gmail.com';
   static String phoneNumber = '+91 7039691810';
 
-  static List<String> get imageList => [
+  static List<String> get eventGalleryImages => [
     'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/event_gallery/DSC06245-2.jpg',
     'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/event_gallery/DSC06253-4.jpg',
     'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/event_gallery/DSC06258-6.jpg',
@@ -70,5 +72,58 @@ class StringValues {
     'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/event_gallery/_DSC1152.jpg',
     'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/event_gallery/_DSC1153.jpg',
     'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/event_gallery/_DSC1436.jpg',
+  ];
+
+  static List<String> get preWeddingGalleryImages => [
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image1.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image2.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image3.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image4.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image5.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image6.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image7.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image8.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image9.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image10.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image11.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image12.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image13.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image14.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/pre-wedding-images/pre_wedding_image15.png',
+  ];
+  static List<String> get portraitGalleryImages => [
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image1.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image2.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image3.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image4.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image5.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image6.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image7.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image8.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image9.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image10.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image11.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image12.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image13.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image14.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image15.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image16.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image17.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image18.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image19.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image20.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image21.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image22.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image23.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image24.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image25.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image26.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image27.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image28.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image29.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image30.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image31.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image32.png',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image33.png',
   ];
 }

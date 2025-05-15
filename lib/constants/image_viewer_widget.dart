@@ -20,6 +20,16 @@ class ImageViewerWidget extends StatelessWidget {
             ),
           );
         },
+        errorWidget:
+            (context, url, error) => Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(imagePath),
+                  fit: BoxFit.contain,
+                ),
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+            ),
       ),
     );
   }
