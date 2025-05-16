@@ -1,4 +1,3 @@
-import 'package:pramod_portfolio/pages/photo_gallery_pages/pre_wedding_gallery.dart';
 
 class StringValues {
   static String image1 =

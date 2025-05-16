@@ -8,10 +8,7 @@ import 'package:pramod_portfolio/pages/splash_screen.dart';
 import 'package:pramod_portfolio/pages/main_pages/bio_page.dart';
 import 'package:pramod_portfolio/pages/main_pages/blog_page.dart';
 import 'package:pramod_portfolio/pages/main_pages/contact_page.dart';
-import 'package:pramod_portfolio/pages/photo_gallery_pages/event_gallery_page.dart';
 import 'package:pramod_portfolio/pages/main_pages/home_page.dart';
-import 'package:pramod_portfolio/pages/photo_gallery_pages/portrait_gallery_page.dart';
-import 'package:pramod_portfolio/pages/photo_gallery_pages/pre_wedding_gallery.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -2,7 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pramod_portfolio/constants/string_values.dart';
 import 'package:pramod_portfolio/constants/widget_values.dart';
 
 class GalleryPageTemplate extends StatelessWidget {
