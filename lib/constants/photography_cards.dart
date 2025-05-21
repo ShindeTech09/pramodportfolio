@@ -49,9 +49,9 @@ class PhotographyCards extends StatelessWidget {
           mainAxisSpacing: 20.0,
           childAspectRatio: 3 / 2, // Adjust aspect ratio for better layout
         ),
-        itemCount: _photographyItems.length,
+        itemCount: StringValues.photographyItems.length,
         itemBuilder: (context, index) {
-          final item = _photographyItems[index];
+          final item = StringValues.photographyItems[index];
           return SizedBox(
             height: cardHeight,
             child: EventCards(
@@ -63,27 +63,4 @@ class PhotographyCards extends StatelessWidget {
       ),
     );
   }
-
-  // List of photography items
-  List<Map<String, String>> get _photographyItems => [
-    {'imagePath': StringValues.cardSlider1, 'textTitle': 'Event Photography'},
-    {
-      'imagePath': StringValues.cardSlider2,
-      'textTitle': 'Pre Wedding Photography',
-    },
-    {'imagePath': StringValues.cardSlider6, 'textTitle': 'Wedding Photography'},
-    {
-      'imagePath': StringValues.cardSlider3,
-      'textTitle': 'Corporate Photography',
-    },
-    {
-      'imagePath': StringValues.cardSlider4,
-      'textTitle': 'Portrait Photography',
-    },
-    {'imagePath': StringValues.cardSlider5, 'textTitle': 'Food Photography'},
-    {
-      'imagePath': StringValues.cardSlider7,
-      'textTitle': 'Baby Shower Photography',
-    },
-  ];
 }

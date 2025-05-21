@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pramod_portfolio/constants/social_media_icon.dart';
 import 'package:pramod_portfolio/constants/widget_values.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class FooterWidget extends StatelessWidget {
   const FooterWidget({super.key});
@@ -65,10 +66,34 @@ class FooterWidget extends StatelessWidget {
             spacing: iconSpacing,
             runSpacing: 10.0,
             children: [
-              SocialMediaIcon(icon: WidgetValues.facebookIcon),
-              SocialMediaIcon(icon: WidgetValues.instagramIcon),
-              SocialMediaIcon(icon: WidgetValues.pinterestIcon),
-              SocialMediaIcon(icon: WidgetValues.twitterIcon),
+              SocialMediaIcon(
+                icon: WidgetValues.facebookIcon,
+                onPressed: () async {
+                  final url = Uri.parse(
+                    "https://www.facebook.com/pramod96more",
+                  );
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url, mode: LaunchMode.externalApplication);
+                  }
+                },
+              ),
+              SocialMediaIcon(
+                icon: WidgetValues.instagramIcon,
+                onPressed: () async {
+                  final url = Uri.parse(
+                    "https://www.instagram.com/pramod_creative_capture",
+                  );
+
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url, mode: LaunchMode.externalApplication);
+                  }
+                },
+              ),
+              SocialMediaIcon(
+                icon: WidgetValues.pinterestIcon,
+                onPressed: () {},
+              ),
+              SocialMediaIcon(icon: WidgetValues.twitterIcon, onPressed: () {}),
             ],
           ),
           const Gap(20),

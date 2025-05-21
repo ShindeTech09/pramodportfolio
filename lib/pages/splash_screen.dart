@@ -131,7 +131,7 @@ class _SplashScreenState extends State<SplashScreen>
 
               // Loading Text Messages
               Positioned(
-                bottom: 160,
+                bottom: screenWidth > 800 ? 160 : 250,
                 child: FadeTransition(
                   opacity: _fadeTextController,
                   child: Text(

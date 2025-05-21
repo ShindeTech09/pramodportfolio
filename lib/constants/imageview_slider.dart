@@ -11,13 +11,8 @@ class ImageViewSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       items: [
-        ImageViewerWidget(imagePath: StringValues.image1),
-        ImageViewerWidget(imagePath: StringValues.image2),
-        ImageViewerWidget(imagePath: StringValues.image3),
-        ImageViewerWidget(imagePath: StringValues.image4),
-        ImageViewerWidget(imagePath: StringValues.image5),
-        ImageViewerWidget(imagePath: StringValues.image6),
-        ImageViewerWidget(imagePath: StringValues.image7),
+        for (int i = 0; i < StringValues.homePageSLiderImages.length; i++)
+          ImageViewerWidget(imagePath: StringValues.homePageSLiderImages[i]),
       ],
       options: WidgetValues.carouselOptions,
     );

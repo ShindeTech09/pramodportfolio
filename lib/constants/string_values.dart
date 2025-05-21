@@ -1,4 +1,3 @@
-
 class StringValues {
   static String image1 =
       'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image1.jpg';
@@ -25,6 +24,16 @@ class StringValues {
   static String cardSlider7 = 'assets/card_slider/card_slider7.png';
   static String emailID = 'pramodcreativecaptures@gmail.com';
   static String phoneNumber = '+91 7039691810';
+
+  static List<String> get homePageSLiderImages => [
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image1.jpg',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image2.jpg',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image3.jpg',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image4.jpg',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image5.jpg',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image6.jpg',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image7.jpg',
+  ];
 
   static List<String> get eventGalleryImages => [
     'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/event_gallery/DSC06245-2.jpg',
@@ -124,5 +133,27 @@ class StringValues {
     'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image31.png',
     'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image32.png',
     'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/portrait-gallery/portrait_image33.png',
+  ];
+  // List of photography items
+  static List<Map<String, String>> get photographyItems => [
+    {'imagePath': StringValues.cardSlider1, 'textTitle': 'Event Photography'},
+    {
+      'imagePath': StringValues.cardSlider2,
+      'textTitle': 'Pre Wedding Photography',
+    },
+    {'imagePath': StringValues.cardSlider6, 'textTitle': 'Wedding Photography'},
+    {
+      'imagePath': StringValues.cardSlider3,
+      'textTitle': 'Corporate Photography',
+    },
+    {
+      'imagePath': StringValues.cardSlider4,
+      'textTitle': 'Portrait Photography',
+    },
+    {'imagePath': StringValues.cardSlider5, 'textTitle': 'Food Photography'},
+    {
+      'imagePath': StringValues.cardSlider7,
+      'textTitle': 'Baby Shower Photography',
+    },
   ];
 }
