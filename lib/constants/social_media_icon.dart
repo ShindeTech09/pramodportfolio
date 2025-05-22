@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class SocialMediaIcon extends StatelessWidget {
-   SocialMediaIcon({
+  const SocialMediaIcon({
     super.key,
     required this.icon,
     required this.onPressed,
   });
 
   final IconData icon;
-  void Function() onPressed;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {

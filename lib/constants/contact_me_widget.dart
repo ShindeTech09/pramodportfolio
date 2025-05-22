@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:pramod_portfolio/constants/string_values.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactMeWidget extends StatelessWidget {
   const ContactMeWidget({super.key});
@@ -74,26 +76,61 @@ class ContactMeWidget extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      Icon(EvaIcons.phone_call_outline, size: iconSize),
-                      const Gap(15),
-                      Text(
-                        StringValues.phoneNumber,
-                        style: TextStyle(fontSize: textFontSize),
-                      ),
-                    ],
+                  GestureDetector(
+                    onTap: () async {
+                      final Uri phoneNumberUri = Uri(
+                        scheme: 'tel',
+                        path: StringValues.phoneNumber,
+                      );
+
+                      if (await canLaunchUrl(phoneNumberUri)) {
+                        await launchUrl(phoneNumberUri);
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Could not launch dialer')),
+                        );
+                      }
+                    },
+                    child: Row(
+                      children: [
+                        Icon(EvaIcons.phone_call_outline, size: iconSize),
+                        const Gap(15),
+                        Text(
+                          StringValues.phoneNumber,
+                          style: TextStyle(fontSize: textFontSize),
+                        ),
+                      ],
+                    ),
                   ),
                   const Gap(10),
-                  Row(
-                    children: [
-                      Icon(EvaIcons.email_outline, size: iconSize),
-                      const Gap(15),
-                      Text(
-                        StringValues.emailID,
-                        style: TextStyle(fontSize: textFontSize),
-                      ),
-                    ],
+                  GestureDetector(
+                    onTap: () async {
+                      final Uri emailUri = Uri(
+                        scheme: 'mailto',
+                        path: StringValues.emailID,
+                      );
+                      if (await canLaunchUrl(emailUri)) {
+                        await launchUrl(emailUri);
+                      } else {
+                        Get.showSnackbar(
+                          GetSnackBar(
+                            messageText: Text('Could not launch email'),
+                            isDismissible: true,
+                            duration: Duration(milliseconds: 100),
+                          ),
+                        );
+                      }
+                    },
+                    child: Row(
+                      children: [
+                        Icon(EvaIcons.email_outline, size: iconSize),
+                        const Gap(15),
+                        Text(
+                          StringValues.emailID,
+                          style: TextStyle(fontSize: textFontSize),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

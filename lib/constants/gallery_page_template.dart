@@ -17,8 +17,10 @@ class GalleryPageTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      extendBodyBehindAppBar: screenWidth > 1024 ? true : false,
+
       appBar: WidgetValues.appBar(context),
       body: SingleChildScrollView(
         child: Padding(
@@ -28,18 +30,19 @@ class GalleryPageTemplate extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Gap((screenWidth > 1024 ? 180 : 140)),
+                Gap((screenWidth > 1024 ? 180 : 40)),
                 Text(pageTitle, style: GoogleFonts.abhayaLibre(fontSize: 50.0)),
-                // const Gap(20.0),
+                const Gap(20.0),
                 GridView.builder(
                   shrinkWrap:
                       true, // Ensures GridView takes only the required height
                   physics:
                       const NeverScrollableScrollPhysics(), // Prevents GridView from scrolling
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3, // Number of columns
-                    mainAxisSpacing: 30.0,
-                    crossAxisSpacing: 30.0,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount:
+                        screenWidth > 700 ? 3 : 2, // Number of columns
+                    mainAxisSpacing: screenWidth > 700 ? 30.0 : 18.0,
+                    crossAxisSpacing: screenWidth > 700 ? 30.0 : 10.0,
                   ),
                   itemCount: imageList.length,
                   itemBuilder: (context, index) {
@@ -50,7 +53,7 @@ class GalleryPageTemplate extends StatelessWidget {
                           imageUrl: imageList[index],
                           progressIndicatorBuilder: (context, url, progress) {
                             return const Center(
-                              child: CircularProgressIndicator(),
+                              child: CircularProgressIndicator(trackGap: 10.0),
                             );
                           },
                           errorWidget: (context, url, error) {
@@ -61,7 +64,7 @@ class GalleryPageTemplate extends StatelessWidget {
                                 ),
                                 child: Image.network(
                                   imageList[index], // Use the correct index
-                                  fit: BoxFit.contain,
+                                  fit: BoxFit.cover,
                                   loadingBuilder: (
                                     context,
                                     child,
@@ -90,7 +93,7 @@ class GalleryPageTemplate extends StatelessWidget {
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: imageProvider,
-                                  fit: BoxFit.contain,
+                                  fit: BoxFit.cover,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
