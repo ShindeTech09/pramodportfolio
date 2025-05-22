@@ -15,7 +15,7 @@ class ImageViewerWidget extends StatelessWidget {
         imageBuilder: (context, imageProvider) {
           return Container(
             decoration: BoxDecoration(
-              image: DecorationImage(image: imageProvider, fit: BoxFit.contain),
+              image: DecorationImage(image: imageProvider, fit: BoxFit.cover),
               borderRadius: BorderRadius.circular(20.0),
             ),
           );
@@ -25,7 +25,7 @@ class ImageViewerWidget extends StatelessWidget {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(imagePath),
-                  fit: BoxFit.contain,
+                  fit: BoxFit.cover,
                 ),
                 borderRadius: BorderRadius.circular(20.0),
               ),
