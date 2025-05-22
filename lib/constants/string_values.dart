@@ -11,13 +11,13 @@ class StringValues {
   static String phoneNumber = '+91 7039691810';
 
   static List<String> get homePageSLiderImages => [
-    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image1.jpg',
-    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image2.jpg',
-    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image3.jpg',
-    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image4.jpg',
-    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image5.jpg',
-    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image6.jpg',
-    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage-slider-image7.jpg',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage_slider_image1.webp',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage_slider_image2.webp',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage_slider_image3.webp',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage_slider_image4.webp',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage_slider_image5.webp',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage_slider_image6.webp',
+    'https://pramod-portfolio-images.s3.ap-south-1.amazonaws.com/homepage_slider_image/homepage_slider_image7.webp',
   ];
 
   static List<String> get eventGalleryImages => [
