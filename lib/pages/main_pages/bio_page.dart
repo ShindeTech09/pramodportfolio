@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pramod_portfolio/constants/footer_widget.dart';
+import 'package:pramod_portfolio/constants/string_values.dart';
 import 'package:pramod_portfolio/constants/widget_values.dart';
 
 class BioPage extends StatelessWidget {
@@ -69,9 +70,7 @@ class BioPage extends StatelessWidget {
               ),
               const Gap(20),
               CircleAvatar(
-                foregroundImage: const AssetImage(
-                  'assets/images/profile_pic.png',
-                ),
+                foregroundImage: AssetImage(StringValues.bioImage),
                 radius: avatarRadius,
               ),
               const Gap(30),

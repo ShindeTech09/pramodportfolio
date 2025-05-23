@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:get/get.dart';
+import 'package:pramod_portfolio/constants/string_values.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -121,9 +122,7 @@ class _SplashScreenState extends State<SplashScreen>
                   duration: const Duration(seconds: 2),
                   opacity: lightValue,
                   child: Image(
-                    image: AssetImage(
-                      'assets/images/Creative-Capture_logo.png',
-                    ),
+                    image: AssetImage(StringValues.logoImage),
                     fit: BoxFit.cover,
                   ),
                 ),

@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:pramod_portfolio/constants/string_values.dart';
 
 class WidgetValues {
   static IconData facebookIcon = FontAwesome.facebook_f_brand;
@@ -29,7 +30,7 @@ class WidgetValues {
               ? 200 // Medium width for tablets
               : 150, // Smaller width for mobile
       leading: Image(
-        image: const AssetImage('assets/images/Creative-Capture_logo.png'),
+        image: AssetImage(StringValues.logoImage),
         fit: BoxFit.contain, // Ensure the logo scales properly
       ),
       toolbarHeight: 150.0,
