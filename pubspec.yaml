@@ -32,6 +32,6 @@ flutter:
 
   assets:
     - assets/images/
-    - assets/card_slider/
+    - assets/images/card_slider/
     - assets/mp3/
     
