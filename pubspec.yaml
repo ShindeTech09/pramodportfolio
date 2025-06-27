@@ -33,5 +33,8 @@ flutter:
   assets:
     - assets/images/
     - assets/images/card_slider/
+    - assets/images/event_gallery/
+    - assets/images/homepage_slider_image/
+    - assets/images/portrait-gallery/
+    - assets/images/pre-wedding-images/
     - assets/mp3/
-    
